@@ -4,10 +4,10 @@
 
 // greet and ask manager name
 // build employee of type manager using a constructor (by passing all the info into the constructor)
-// generate htmo with info of the employy (running build command)
+// generate html with info of the employee (running build command)
 
 // ask client if they want to add more itners or engineers or exit
-// if the want ot exit finis the app
+// if the want to exit finish the app
 // if they want to build a new empoyer add one to html using the constructor for the approriate type
 
 
