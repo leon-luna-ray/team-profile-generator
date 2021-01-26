@@ -10,21 +10,40 @@
 // if the want to exit finish the app
 // if they want to build a new empoyer add one to html using the constructor for the approriate type
 
-
-function Employee(name, id) {
+// Employee constructor
+function Employee(name, id, email) {
+    // Required paramters
     this.name = name;
     this.id = id;
+    this.email = email;
+
+    this.getName = () => {};
+    this.getId = () => {};
+    this.getEmail = () => {};
+    this.getRole = () => {
+        // return employee?
+    };
+
+    // Build HTML here
     this.buildHtml = () => {
+        //Tests
         console.log(this.name);
         console.log(this.role)
         console.log(this.id);
     };
 };
 
+// My idea was to create more contructors by copy/pasting the one above and changing/adding additional properties and methods per the readme.
+
+// Manager constructor, instructor showed us this starter code but I'm not sure why it's so different from the contructor above yet.
 function Manager(name, id, role) {
     this.role = role;
+    // aded this per the readme
+    this.offieNumber = officeNumber;
+    // I belive this is taking info from the employee constructor...
     Employee.call(this, name, id);
 }
 
+// Create new manager instance and build HTML
 const manager = new Manager('a', 'b', 'c');
 manager.buildHtml();
