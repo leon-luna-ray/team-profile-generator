@@ -12,7 +12,6 @@
 
 // Employee constructor
 function Employee(name, id, email) {
-    // Required paramters
     this.name = name;
     this.id = id;
     this.email = email;
@@ -21,7 +20,7 @@ function Employee(name, id, email) {
     this.getId = () => {};
     this.getEmail = () => {};
     this.getRole = () => {
-        // return employee?
+        return 'employee'
     };
 
     // Build HTML here
@@ -33,17 +32,79 @@ function Employee(name, id, email) {
     };
 };
 
-// My idea was to create more contructors by copy/pasting the one above and changing/adding additional properties and methods per the readme.
+// Engineer constructor
+function Engineer(name, id, email, github) {
+    this.name = name;
+    this.id = id;
+    this.email = email;
+    this.github = github;
 
-// Manager constructor, instructor showed us this starter code but I'm not sure why it's so different from the contructor above yet.
-function Manager(name, id, role) {
-    this.role = role;
-    // aded this per the readme
-    this.offieNumber = officeNumber;
-    // I belive this is taking info from the employee constructor...
+    this.getName = () => {};
+    this.getId = () => {};
+    this.getEmail = () => {};
+    this.getGithub = () => {};
+    this.getRole = () => {
+        return 'engineer'
+    };
+
+    // Build HTML here
+    this.buildHtml = () => {
+        //Tests
+        console.log(this.name);
+        console.log(this.role)
+        console.log(this.id);
+    };
+};
+
+// Intern constructor
+function Intern(name, id, email, school) {
+    this.name = name;
+    this.id = id;
+    this.email = email;
+    this.school = school;
+
+    this.getName = () => {};
+    this.getId = () => {};
+    this.getEmail = () => {};
+    this.getSchool = () => {};
+    this.getRole = () => {
+        return 'Intern'
+    };
+
+    // Build HTML here
+    this.buildHtml = () => {
+        //Tests
+        console.log(this.name);
+        console.log(this.role)
+        console.log(this.id);
+    };
+};
+
+function Manager(name, id, email, number) {
+    this.name = name;
+    this.id = id;
+    this.email = email;
+    this.officeNumber = number;
+
+    this.getName = () => {};
+    this.getId = () => {};
+    this.getEmail = () => {};
+    this.getOfficeNumber = () => {};
+    this.getRole = () => {
+        return 'Manager'
+    };
+
     Employee.call(this, name, id);
-}
+
+    // Build HTML here
+    this.buildHtml = () => {
+        //Tests
+        console.log(this.name);
+        console.log(this.role)
+        console.log(this.id);
+    };
+};
 
 // Create new manager instance and build HTML
-const manager = new Manager('a', 'b', 'c');
+const manager = new Manager('a', 'b', 'c', 'd');
 manager.buildHtml();
