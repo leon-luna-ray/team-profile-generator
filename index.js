@@ -11,100 +11,36 @@
 // if they want to build a new empoyer add one to html using the constructor for the approriate type
 
 // Employee constructor
-function Employee(name, id, email) {
+class Employee {
+    constructor(name, id, email) {
     this.name = name;
     this.id = id;
     this.email = email;
-
-    this.getName = () => {};
-    this.getId = () => {};
-    this.getEmail = () => {};
-    this.getRole = () => {
-        return 'employee'
+    }
+    getName(){
+        return this.name;
     };
-
-    // Build HTML here
-    this.buildHtml = () => {
-        //Tests
-        console.log(this.name);
-        console.log(this.role)
-        console.log(this.id);
+    getId(){return this.id};
+    getEmail(){return this.email};
+    getRole() {
+        return 'Employee'
     };
 };
 
-// Engineer constructor
-function Engineer(name, id, email, github) {
-    this.name = name;
-    this.id = id;
-    this.email = email;
-    this.github = github;
-
-    this.getName = () => {};
-    this.getId = () => {};
-    this.getEmail = () => {};
-    this.getGithub = () => {};
-    this.getRole = () => {
-        return 'engineer'
+class Engineer extends Employee {
+    constructor(name, id, email, github) {
+        super(name, id, email);
+        this.github = github;
     };
 
-    // Build HTML here
-    this.buildHtml = () => {
-        //Tests
-        console.log(this.name);
-        console.log(this.role)
-        console.log(this.id);
+    getGithub(){
+        return this.github;
+    };
+
+    getRole(){
+        return 'Engineer'
     };
 };
 
-// Intern constructor
-function Intern(name, id, email, school) {
-    this.name = name;
-    this.id = id;
-    this.email = email;
-    this.school = school;
 
-    this.getName = () => {};
-    this.getId = () => {};
-    this.getEmail = () => {};
-    this.getSchool = () => {};
-    this.getRole = () => {
-        return 'Intern'
-    };
-
-    // Build HTML here
-    this.buildHtml = () => {
-        //Tests
-        console.log(this.name);
-        console.log(this.role)
-        console.log(this.id);
-    };
-};
-
-function Manager(name, id, email, number) {
-    this.name = name;
-    this.id = id;
-    this.email = email;
-    this.officeNumber = number;
-
-    this.getName = () => {};
-    this.getId = () => {};
-    this.getEmail = () => {};
-    this.getOfficeNumber = () => {};
-    this.getRole = () => {
-        return 'Manager'
-    };
-
-    Employee.call(this, name, id);
-
-    // Build HTML here
-    this.buildHtml = () => {
-        //Tests
-        console.log(this.name);
-        console.log(this.role)
-        console.log(this.id);
-    };
-};
-
-// Create new manager instance and build HTML
-const manager = new Manager('a', 'b', 'c', 'd');
-manager.buildHtml();
+// Build the other two here
