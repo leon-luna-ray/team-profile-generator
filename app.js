@@ -18,11 +18,29 @@ function questions(){
 
 function buildEngineer(){
     inquirer.prompt(
-        [
-            //questions
-        ]
+        [ {
+            type: 'input',
+            name: 'name',
+            message: 'Please enter employee name.'
+        }, 
+        {
+            type: 'input',
+            name: 'id',
+            message: 'Please enter employee id.'
+        },         
+        {
+            type: 'input',
+            name: 'email',
+            message: 'What is the employee\'s e-mail address?'
+        }, 
+        {
+            type: 'input',
+            name: 'github',
+            message: 'What is the employee\'s Github username?'
+        }]
     ).then(data => {
         let engineer = new Engineer(data.name, data.id, data.email, data.github)
         team.push(engineer)
     })
 };
+
