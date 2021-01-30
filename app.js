@@ -1,6 +1,11 @@
-// Imported inquirer
+// Import inquirer
 const inquirer = require('inquirer');
-const engineer = require('./lib/engineer.js');
+
+// Import classes from lib
+const Employee = require('./lib/employee.js');
+const Engineer = require('./lib/engineer.js');
+const Intern = require('./lib/intern.js');
+const Manager = require('./lib/manager.js');
 
 // Team members will be stored in this empty array. Need to find out how to get this into the helper functions to store. May need to write to file.
 let team = [];
@@ -49,10 +54,11 @@ function buildEngineer(){
         let engineer = new Engineer(data.name, data.id, data.email, data.github)
 
         //Push to the team array.
-        team.push(engineer)
+        team.push(engineer);
+        console.log(team);
     }) // then
 }; // buildEngineer
 
-console.log(team)
+
 //Invoke newEmployee function.
 newEmployee();
