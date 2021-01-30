@@ -1,5 +1,7 @@
 // Imported inquirer
 const inquirer = require('inquirer');
+const engineer = require('./lib/engineer.js');
+
 // Team members will be stored in this empty array. Need to find out how to get this into the helper functions to store. May need to write to file.
 let team = [];
 
@@ -51,5 +53,6 @@ function buildEngineer(){
     }) // then
 }; // buildEngineer
 
+console.log(team)
 //Invoke newEmployee function.
 newEmployee();
