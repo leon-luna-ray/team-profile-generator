@@ -1,7 +1,10 @@
+// Imported inquirer
 const inquirer = require('inquirer');
+// Team members will be stored in this empty array. Need to find out how to get this into the helper functions to store. May need to write to file.
 let team = [];
 
-function questions(){
+// Employee type 
+function newEmployee(){
     inquirer.prompt(
         {
             type: 'list',
@@ -12,10 +15,11 @@ function questions(){
     ).then(data => {
         if(data.employeeType === 'Engineer') {
             buildEngineer();
-        }
+        } // Finish the if/else statement invoking the build employee functions.
     }) 
-};
+}; // newEmployee
 
+// Build new employee profile based on role.
 function buildEngineer(){
     inquirer.prompt(
         [ {
@@ -39,8 +43,13 @@ function buildEngineer(){
             message: 'What is the employee\'s Github username?'
         }]
     ).then(data => {
+        // Create new instance of Engineer with the inquirer response.
         let engineer = new Engineer(data.name, data.id, data.email, data.github)
-        team.push(engineer)
-    })
-};
 
+        //Push to the team array.
+        team.push(engineer)
+    }) // then
+}; // buildEngineer
+
+//Invoke newEmployee function.
+newEmployee();
