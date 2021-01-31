@@ -1,11 +1,15 @@
-describe('Description of what is being tested', () => {
-    test('Description of what the test should do', () => {
-        // test code goes here
-    });
+// Import the employee class
+const Employee = require('../lib/employee.js');
+
+// Need to find out if this is what is needed for the tests.
+describe('Employee', () => {
+   describe('getName', () => {
+       it('should return the employee name', () => {
+           const name = Employee.name;
+
+           const result = new Employee(name, id, email);
+
+           expect(result.name).toEqual(name);
+       });
+   });
 });
-
-// assign value of whatever the expected output will be
-const output = [{}];
-
-// Expect statment will check the value of the input
-expect(className(input, 'input-type')).toEqual(output);
