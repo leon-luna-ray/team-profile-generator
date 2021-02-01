@@ -138,13 +138,16 @@ function buildTeam () {
             message: 'What is the new team name?'
         }
     ]).then(data => {
-        console.log(data)
+        writeTeamFile(data)
     });
+
+    function writeTeamFile(data) {
+        // Used writeFileSync vs writeFile to get to work.
+        // Need to figure out how to store the data.
+        fs.writeFileSync(`${data.teamName}.txt`, data.teamName)
+      };
 };
 
-// function writeTeam(data) {
-//     fs.writeFileSync('team.txt', data)
-//   };
 
-//Invoke newmanager function.
+
 newEmployee();
