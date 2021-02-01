@@ -1,8 +1,8 @@
-// Import inquirer
+// Import inquirer and fs
 const inquirer = require('inquirer');
+const fs = require('fs');
 
 // Import classes from lib
-const Employee = require('./lib/employee.js');
 const Engineer = require('./lib/engineer.js');
 const Intern = require('./lib/intern.js');
 const Manager = require('./lib/manager.js');
@@ -26,7 +26,9 @@ function newEmployee(){
             buildIntern();
         } else if (data.employeeType === 'Manager') {
             buildManager();
-        } 
+        } else if (data.employeeType === 'Build Team') {
+            buildTeam();
+        }
     }) // .then
 }; // newEmployee
 
@@ -127,9 +129,22 @@ function buildManager(){
     }) // .then
 }; // buildManager
 
+// Need help to build the team, need to find a way to store
+function buildTeam () {
+    inquirer.prompt(
+        [{
+            type: 'input',
+            name: 'teamName',
+            message: 'What is the new team name?'
+        }
+    ]).then(data => {
+        console.log(data)
+    });
+};
 
-
-// This data is passed into an object and pushed to the team array. From there it will be used with the helper functions in the src folder to build the HTML.
+// function writeTeam(data) {
+//     fs.writeFileSync('team.txt', data)
+//   };
 
 //Invoke newmanager function.
 newEmployee();
