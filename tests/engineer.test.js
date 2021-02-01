@@ -1,5 +1,5 @@
 // Import the engineer class
-const engineer = require('../lib/engineer.js');
+const Engineer = require('../lib/engineer.js');
 
 // Test engineer class
 describe('Engineer', () => {
@@ -8,7 +8,7 @@ describe('Engineer', () => {
        it('return the engineer name', () => {
 
            const name = 'engineer name';
-           const result = new Engineer(name, 'id', 'email');
+           const result = new Engineer(name, 'id', 'email', 'github');
 
            expect(result.getName()).toEqual(name);
         });
@@ -19,7 +19,7 @@ describe('Engineer', () => {
         it('return the engineer id', () => {
  
             const id = 'engineer id';
-            const result = new engineer('name', id, 'email');
+            const result = new Engineer('name', id, 'email', 'github');
  
             expect(result.getId()).toEqual(id);
          });
@@ -30,19 +30,30 @@ describe('Engineer', () => {
         it('return the engineer e-mail', () => {
  
             const email = 'engineer e-mail';
-            const result = new engineer('name', 'id', email);
+            const result = new Engineer('name', 'id', email, 'github');
  
             expect(result.getEmail()).toEqual(email);
          });
      }); //getEmail
+
+          // Test github method
+     describe('getGithub', () => {
+        it('return the engineer github user name', () => {
+ 
+            const github = 'engineer github';
+            const result = new Engineer('name', 'id', 'email', github);
+ 
+            expect(result.getGithub()).toEqual(github);
+         });
+     }); //getGithub
 
      // Test role method
      describe('getRole', () => {
          // Positive test
         it('return the engineer role', () => {
  
-            const role = 'engineer';
-            const result = new engineer('name', 'id', 'email');
+            const role = 'Engineer';
+            const result = new Engineer('name', 'id', 'email', 'github');
  
             expect(result.getRole()).toEqual(role);
          });
