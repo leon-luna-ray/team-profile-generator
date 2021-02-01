@@ -5,7 +5,7 @@ const Employee = require('../lib/employee.js');
 describe('Employee', () => {
     // Test name method
    describe('getName', () => {
-       it('should return the employee name', () => {
+       it('return the employee name', () => {
 
            const name = 'Employee name';
            const result = new Employee(name, 'id', 'email');
@@ -16,7 +16,7 @@ describe('Employee', () => {
 
     // Test id method
     describe('getId', () => {
-        it('should return the employee id', () => {
+        it('return the employee id', () => {
  
             const id = 'Employee id';
             const result = new Employee('name', id, 'email');
@@ -27,7 +27,7 @@ describe('Employee', () => {
 
      // Test email method
      describe('getEmail', () => {
-        it('should return the employee e-mail', () => {
+        it('return the employee e-mail', () => {
  
             const email = 'Employee e-mail';
             const result = new Employee('name', 'id', email);
@@ -38,7 +38,8 @@ describe('Employee', () => {
 
      // Test role method
      describe('getRole', () => {
-        it('should return the employee role', () => {
+         // Positive test
+        it('return the employee role', () => {
  
             const role = 'Employee';
             const result = new Employee('name', 'id', 'email');
