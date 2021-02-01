@@ -5,9 +5,8 @@ const Employee = require('../lib/employee.js');
 describe('Employee', () => {
    describe('getName', () => {
        it('should return the employee name', () => {
-           const name = Employee.name;
-
-           const result = new Employee(name, id, email);
+           const name = 'name';
+           const result = new Employee(name, 'id', 'email');
 
            expect(result.name).toEqual(name);
        });
