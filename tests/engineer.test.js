@@ -36,7 +36,7 @@ describe('Engineer', () => {
          });
      }); //getEmail
 
-          // Test github method
+    // Test github method
      describe('getGithub', () => {
         it('return the engineer github user name', () => {
  
@@ -49,7 +49,6 @@ describe('Engineer', () => {
 
      // Test role method
      describe('getRole', () => {
-         // Positive test
         it('return the engineer role', () => {
  
             const role = 'Engineer';
