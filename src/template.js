@@ -21,21 +21,27 @@ function managerTemplate(manager){
             // use the methods manager.getName
 };
 
-function mainTemplate(array) {
-    console.log(array);
+function mainTemplate(teamArray) {
+    console.log(teamArray);
+    teamArray.forEach(buildCard);
 
-    array.forEach(
-        if(this.role === 'Engineer') {
+    function buildCard(data) {
+        if(data.role === 'Engineer') {
             // need to figure out how to get this loop working
-            let markup = engineerTemplate(this);
-        } else if (data.employeeType === 'Intern') {
-            buildIntern();
-        } else if (data.employeeType === 'Manager') {
+            let markup = engineerTemplate();
+
+            //test
+            console.log(`inside the buildCard function to check name: ${data.name}`)
+            
+        } else if (this.role === 'Intern') {
+            let markup = internTemplate();
+        } else if (this.role === 'Manager') {
             buildManager();
-        } else if (data.employeeType === 'Build Team') {
+        } else if (this.role === 'Build Team') {
             buildTeam();
         }
-    )
+    
+    }
 };
 
 module.exports = mainTemplate;
