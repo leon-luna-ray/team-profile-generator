@@ -59,9 +59,8 @@ function buildEngineer(){
         }]
     ).then(data => {
         // Create new instance of Engineer with the inquirer response.
-        let engineer = new Engineer(data.name, data.id, data.email, data.github)
+        let engineer = new Engineer(data.name, data.id, data.email, data.github);
 
-        //Push to the team array.
         team.push(engineer);
         newEmployee();
     }) // .then
@@ -92,9 +91,8 @@ function buildIntern(){
     ).then(data => {
         // Create new instance of Intern with the inquirer response.
         let intern = new Intern(data.name, data.id, data.email, data.school);
-
         //Push to the team array.
-        team.push(Intern);
+        team.push(intern);
         newEmployee();
     }) // .then
 }; // buildIntern
@@ -124,7 +122,6 @@ function buildManager(){
     ).then(data => {
         // Create new instance of Manager with the inquirer response.
         let manager = new Manager(data.name, data.id, data.email, data.number)
-
         //Push to the team array.
         team.push(manager);
         newEmployee();
@@ -145,9 +142,9 @@ function buildTeam () {
 
     function writeTeamFile(data) {
         // from here the array is pushed to the main template file and run, then it will be written to index.html
-        fs.writeFileSync(path.join('output', 'index.html'), mainTemplate(team));
+        fs.writeFileSync(path.join('output', `${data.teamName}.html`), mainTemplate(team));
       };
-};
+}; // buildTeam
 
 
 
