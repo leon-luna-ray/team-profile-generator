@@ -23,7 +23,7 @@ function generateMarkup(teamMembers) {
     function buildCard(teamMember) {
         if(teamMember.role === 'Engineer') {
             let markup = engineerTemplate(teamMember);
-            // need to find out where to send this markup
+            // need to find out where to send this markup, likely invoke another function to push into the index file in the correct location.
             console.log(markup);
 
         } else if (teamMember.role === 'Intern') {
