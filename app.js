@@ -2,7 +2,7 @@
 const inquirer = require('inquirer');
 const path = require('path');
 const fs = require('fs');
-const mainTemplate = require('./src/template')
+const generateMarkup = require('./src/template');
 
 // Import classes from lib
 const Engineer = require('./lib/engineer.js');
@@ -142,7 +142,7 @@ function buildTeam () {
 
     function writeTeamFile(data) {
         // from here the array is pushed to the main template file and run, then it will be written to index.html
-        fs.writeFileSync(path.join('output', `${data.teamName}.html`), mainTemplate(team));
+        fs.writeFileSync(path.join('output', `${data.teamName}.html`), generateMarkup(team));
       };
 }; // buildTeam
 

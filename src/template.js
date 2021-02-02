@@ -1,47 +1,39 @@
 // pass the employee arry in from the app here
 // one for the full page
-function managerTemplate(manager){
-    return `` // the manager card html goes here
+function engineerTemplate(teamMember){
+    return `Hello from the ${teamMember.role} markup template!` // the manager card html goes here
             // use the methods manager.getName
 };
 
-function managerTemplate(manager){
-    return `` // the manager card html goes here
+function internTemplate(teamMember){
+    return `Hello from the ${teamMember.role} markup template!` // the manager card html goes here
             // use the methods manager.getName
 };
 
-function managerTemplate(manager){
-    return `` // the manager card html goes here
+function managerTemplate(teamMember){
+    return `Hello from the ${teamMember.role} markup template!` // the manager card html goes here
             // use the methods manager.getName
 };
 
-function managerTemplate(manager){
-    return `
-    ` // the manager card html goes here
-            // use the methods manager.getName
+// add more here?
+
+function generateMarkup(teamMembers) {
+    teamMembers.forEach(buildCard);
+
+    function buildCard(teamMember) {
+        if(teamMember.role === 'Engineer') {
+            let markup = engineerTemplate(teamMember);
+            // need to find out where to send this markup
+            console.log(markup);
+
+        } else if (teamMember.role === 'Intern') {
+            let markup = internTemplate(teamMember);
+                console.log(markup);
+        } else if (teamMember.role === 'Manager') {
+            let markup = managerTemplate(teamMember);
+                console.log(markup);
+        };
+    };
 };
 
-function mainTemplate(teamArray) {
-    console.log(teamArray);
-    teamArray.forEach(buildCard);
-
-    function buildCard(data) {
-        if(data.role === 'Engineer') {
-            // need to figure out how to get this loop working
-            let markup = engineerTemplate();
-
-            //test
-            console.log(`inside the buildCard function to check name: ${data.name}`)
-            
-        } else if (this.role === 'Intern') {
-            let markup = internTemplate();
-        } else if (this.role === 'Manager') {
-            buildManager();
-        } else if (this.role === 'Build Team') {
-            buildTeam();
-        }
-    
-    }
-};
-
-module.exports = mainTemplate;
+module.exports = generateMarkup;
