@@ -1,6 +1,8 @@
 // Import inquirer and fs
 const inquirer = require('inquirer');
+const path = require('path');
 const fs = require('fs');
+const mainTemplate = require('./src/template')
 
 // Import classes from lib
 const Engineer = require('./lib/engineer.js');
@@ -61,7 +63,7 @@ function buildEngineer(){
 
         //Push to the team array.
         team.push(engineer);
-        console.log(team);
+        newEmployee();
     }) // .then
 }; // buildEngineer
 
@@ -93,7 +95,7 @@ function buildIntern(){
 
         //Push to the team array.
         team.push(Intern);
-        console.log(team);
+        newEmployee();
     }) // .then
 }; // buildIntern
 
@@ -125,7 +127,7 @@ function buildManager(){
 
         //Push to the team array.
         team.push(manager);
-        console.log(team);
+        newEmployee();
     }) // .then
 }; // buildManager
 
@@ -142,9 +144,8 @@ function buildTeam () {
     });
 
     function writeTeamFile(data) {
-        // Used writeFileSync vs writeFile to get to work.
-        // Need to figure out how to store the data.
-        fs.writeFileSync(`${data.teamName}.txt`, data.teamName)
+        // from here the array is pushed to the main template file and run, then it will be written to index.html
+        fs.writeFileSync(path.join('output', 'index.html'), mainTemplate(team));
       };
 };
 
