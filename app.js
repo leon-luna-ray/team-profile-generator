@@ -130,20 +130,24 @@ function buildManager(){
 
 // Need help to build the team, need to find a way to store
 function buildTeam () {
-    inquirer.prompt(
-        [{
-            type: 'input',
-            name: 'teamName',
-            message: 'What is the new team name?'
-        }
-    ]).then(data => {
-        writeTeamFile(data)
-    });
+    // inquirer.prompt(
+    //     [{
+    //         type: 'input',
+    //         name: 'teamName',
+    //         message: 'What is the new team name?'
+    //     }
+    // ]).then(data => {
+    //     writeTeamFile(data)
+    // });
 
-    function writeTeamFile(data) {
-        // from here the array is pushed to the main template file and run, then it will be written to index.html
-        fs.writeFileSync(path.join('output', `${data.teamName}.html`), generateMarkup(team));
-      };
+    // function writeTeamFile(data) {
+    //     // from here the array is pushed to the main template file and run, then it will be written to index.html
+    //     fs.writeFileSync(path.join('output', `${data.teamName}.html`), generateMarkup(team));
+    //   };
+
+    console.log('go team!');
+    const markup = generateMarkup(team);
+
 }; // buildTeam
 
 
