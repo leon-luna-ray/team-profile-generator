@@ -34,7 +34,7 @@ function generateMarkup(team) {
     team.forEach(member => {
         if (member.role === 'Engineer') {
             let engineerCard = engineerTemplate(member);
-            console.log(engineerCard);
+            handleMarkup(engineerCard);
         } else if (member.role === 'Intern') {
             let internCard = internTemplate(member);
             console.log(internCard);
@@ -44,9 +44,27 @@ function generateMarkup(team) {
         };
     });
 
-    let markup = `
-    
-    `
+    function handleMarkup(card) {
+        // Need to find a way to append each card to this template then create and push to the HTML file.
+        let markup = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+            <title>Team Page</title>
+        </head>
+        <body>
+            <div class="employee-grid">
+                ${card}
+            </div>
+        </body>
+        </html>
+        `
+        console.log(markup)
+    }; //handleMakrup`
 };
 
 module.exports = generateMarkup;
