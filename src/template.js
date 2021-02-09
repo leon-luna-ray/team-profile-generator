@@ -1,32 +1,87 @@
-// pass the employee arry in from the app here
-// one for the full page
+// pass the employee array in from the app here to generate a card based on employee role, append to html and create html page
+
 function engineerTemplate(member){
     return `
-    <div class="card column employee-card">
-        <header class="card-header">
-            <p class="card-header-title">${member.name}</p>
-        </header>
-
-        <div class="content">
-            <ul>
-            <li>Role: ${member.role}</li>
+    <div class="card">
+    <div class="card-content">
+      <div class="media">
+        <div class="media-left">
+          <figure class="image is-48x48">
+            <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder role icon"> <!--find icons to add for each role-->
+          </figure>
+        </div>
+        <div class="media-content">
+          <p class="title is-4">${member.name}</p>
+          <p class="subtitle is-6">${member.role}</p>
+        </div>
+      </div>
+  
+      <div class="content">
+        <ul style="list-style-type: none;">
             <li>ID: ${member.id}</li>
             <li>E-mail: <a href="mailto:${member.email}">${member.email}</a></li>
-            <li>Github: <a href="https://www.github.com/${member.github}">${member.github}</a></li>
+            <li>Github: <a href="https://www.github.com/${member.github}>${member.github}</a></li>
             </ul> 
-        </div>
+      </div>
     </div>
+  </div>
    `
 };
 
 function internTemplate(member){
-    return `Hello from the ${member.role} markup template!` // the manager card html goes here
-            // use the methods manager.getName
+    return `
+    <div class="card">
+    <div class="card-content">
+      <div class="media">
+        <div class="media-left">
+          <figure class="image is-48x48">
+            <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder role icon"> <!--find icons to add for each role-->
+          </figure>
+        </div>
+        <div class="media-content">
+          <p class="title is-4">${member.name}</p>
+          <p class="subtitle is-6">${member.role}</p>
+        </div>
+      </div>
+  
+      <div class="content">
+        <ul style="list-style-type: none;">
+            <li>ID: ${member.id}</li>
+            <li>E-mail: <a href="mailto:${member.email}">${member.email}</a></li>
+            <li>School: ${member.school}</a></li>
+            </ul> 
+      </div>
+    </div>
+  </div>
+   `
 };
 
 function managerTemplate(member){
-    return `Hello from the ${member.role} markup template!` // the manager card html goes here
-            // use the methods manager.getName
+    return `
+    <div class="card">
+    <div class="card-content">
+      <div class="media">
+        <div class="media-left">
+          <figure class="image is-48x48">
+            <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder role icon"> <!--find icons to add for each role-->
+          </figure>
+        </div>
+        <div class="media-content">
+          <p class="title is-4">${member.name}</p>
+          <p class="subtitle is-6">${member.role}</p>
+        </div>
+      </div>
+  
+      <div class="content">
+        <ul style="list-style-type: none;">
+            <li>ID: ${member.id}</li>
+            <li>E-mail: <a href="mailto:${member.email}">${member.email}</a></li>
+            <li>Office Number: ${member.number}</a></li>
+            </ul> 
+      </div>
+    </div>
+  </div>
+   `
 };
 
 
