@@ -11,8 +11,8 @@ function engineerTemplate(member){
             <ul>
             <li>Role: ${member.role}</li>
             <li>ID: ${member.id}</li>
-            <li>E-mail: ${member.email}</li>
-            <li>Github: ${member.github}</li>
+            <li>E-mail: <a href="mailto:${member.email}">${member.email}</a></li>
+            <li>Github: <a href="https://www.github.com/${member.github}">${member.github}</a></li>
             </ul> 
         </div>
     </div>
