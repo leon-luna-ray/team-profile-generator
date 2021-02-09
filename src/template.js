@@ -1,13 +1,22 @@
 // pass the employee arry in from the app here
 // one for the full page
 function engineerTemplate(member){
-    // return `
-    // <h2>${member.name}</h2>
-    // Role: ${member.role}
-    // E-Mail: ${member.email}
-    // Github: ${member.github}
-    // `
-    return `Hello from the ${member.role} markup template!`
+    return `
+    <div class="card column employee-card">
+        <header class="card-header">
+            <p class="card-header-title">${member.name}</p>
+        </header>
+
+        <div class="content">
+            <ul>
+            <li>Role: ${member.role}</li>
+            <li>ID: ${member.id}</li>
+            <li>E-mail: ${member.email}</li>
+            <li>Github: ${member.github}</li>
+            </ul> 
+        </div>
+    </div>
+   `
 };
 
 function internTemplate(member){
@@ -35,7 +44,9 @@ function generateMarkup(team) {
         };
     });
 
-
+    let markup = `
+    
+    `
 };
 
 module.exports = generateMarkup;
