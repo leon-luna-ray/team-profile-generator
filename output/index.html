@@ -4,52 +4,70 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
-    <title>Team Page</title>
+    <title>My Team</title>
 </head>
 <body>
-    <div class="card column employee-card">
-        <div class="card-header">
-            <p class="card-header-title">Employee name</p>
-            <img src="" alt="" class="card-header-icon">
-        </div>
-
-        <div class="content">
-            <ul>
-            <li>Role: </li>
-            <li>ID: </li>
-            <li>E-mail: <a href="mailto:">Email</a></li>
-            <li>Github: <a href="https://www.github.com/user-name">user-name</a></li>
-            </ul> 
-        </div>
-    </div> <!--employee card-->
-
-    <div class="card">
-        <div class="card-content">
-          <div class="media">
-            <div class="media-left">
-              <figure class="image is-48x48">
-                <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder role icon"> <!--find icons to add for each role-->
-              </figure>
+    <header class="hero is-primary">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title is-1 page-title center">My Team</h1>
             </div>
-            <div class="media-content">
-              <p class="title is-4">Employee Name</p>
-              <p class="subtitle is-6">Employee Role</p>
-            </div>
-          </div>
-      
-          <div class="content">
-            <ul style="list-style-type: none;">
-                <li>ID: </li>
-                <li>E-mail: <a href="mailto:">Email</a></li>
-                <li>Github: <a href="https://www.github.com/user-name">user-name</a></li>
-                </ul> 
-          </div>
         </div>
-      </div>
+    </header> <!--header-->
 
+    <main class="container">
+    <div class="columns">
+        <div class="column">
+            <div class="card manager-card">
+                <div class="card-content employee-name">
+                    <h2 class="title">EMPLOYEE NAME</h2>
+                    <h3 class="subtitle"><i class="fas fa-briefcase"></i> Manager</h3>
+                </div>
+                <div class="card-content contact-info">
+                    <ul class="employee-details">
+                        <li>ID: EMPLOYEE ID</li>
+                        <li>E-Mail: EMPLOYEE EMAIL</li>
+                        <li>SPECIAL: EMPLOYEE SPECIAL</li>
+                    </ul>
+                </div>
+            </div>
+        </div><!--column/manager card-->
 
+        <div class="column">
+            <div class="card engineer-card">
+                <div class="card-content employee-name">
+                    <h2 class="title">EMPLOYEE NAME</h2>
+                    <h3 class="subtitle"><i class="fas fa-laptop-code"></i> Engineer</h3>
+                </div>
+                <div class="card-content contact-info">
+                    <ul class="employee-details">
+                        <li>ID: EMPLOYEE ID</li>
+                        <li>E-Mail: EMPLOYEE EMAIL</li>
+                        <li>SPECIAL: EMPLOYEE SPECIAL</li>
+                    </ul>
+                </div>
+            </div>
+        </div><!--column/engineer card-->
 
+        <div class="column">
+            <div class="card intern-card">
+                <div class="card-content employee-name">
+                    <h2 class="title">EMPLOYEE NAME</h2>
+                    <h3 class="subtitle"><i class="fas fa-user-graduate"></i> Intern</h3>
+                </div>
+                <div class="card-content contact-info">
+                    <ul class="employee-details">
+                        <li>ID: EMPLOYEE ID</li>
+                        <li>E-Mail: EMPLOYEE EMAIL</li>
+                        <li>SPECIAL: EMPLOYEE SPECIAL</li>
+                    </ul>
+                </div>
+            </div>
+        </div><!--column/intern card-->
 
+    </div><!--columns-->
+</main> <!--container-->
 </body>
 </html>
