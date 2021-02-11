@@ -3,7 +3,11 @@
 
   ## Description
 
-  A command line application for busy bosses to quickly render a styled team HTML page. The app 
+  A command line application for busy bosses to quickly render a styled team HTML page for quick access! The app will promt the end-user for thier contact information as well as their employees'. Once complete the app will generate a team.html file in the output folder containing everyone on the team.
+
+  ## Usage
+
+  The app is launched via command line with node app.js. You will need to install the required node dependencies before running the app by running npm i. 
 
   ## Table of Contents
 
@@ -21,7 +25,7 @@
 
   ## Technologies
   
-  HTML, Bulma CSS, Font Awesome, Javascript, Node
+  HTML, Bulma CSS, Font Awesome, Javascript, Node (npm: inquirer, jest)
 
   ## Known-Bugs
 
