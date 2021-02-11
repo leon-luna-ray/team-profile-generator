@@ -7,7 +7,7 @@
 
   ## Usage
 
-  The app is launched via command line with node app.js. You will need to install the required node dependencies before running the app by running npm i. 
+  The app is launched via command line with the command node app.js. You will need to have node installed on your machine and install the required dependencies before running the app. 
 
   ## Table of Contents
 
