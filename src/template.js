@@ -12,7 +12,7 @@ function engineerTemplate(member){
             <ul class="employee-details">
                 <li>ID: ${member.id}</li>
                 <li>E-Mail: <a href="mailto:${member.email}">${member.email}</a></li>
-                <li>Github: <a href="https://www.github.com/${member.github}">${member.github}</a></li>
+                <li>Github: <a href="https://www.github.com/${member.github}" target="_blank">${member.github}</a></li>
             </ul>
         </div>
     </div>

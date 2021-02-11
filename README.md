@@ -15,17 +15,17 @@
   * [Contact](#contact)
   * [Links](#links)
 
-  ## Image
+  ## Images
 
-  ![Screenshot](./assets/screencapture.png)
+  ![HTML](./assets/screencapture.png)
 
   ## Technologies
   
-  HTML,CSS,Javascript,Font Awesome,Node
+  HTML, Bulma CSS, Font Awesome, Javascript, Node
 
   ## Known-Bugs
 
-  No known bugs.
+  Possible bug with CSS grid, working on getting cards on to next row.
 
   ## Next-Steps
 
@@ -46,7 +46,9 @@
 
   ## Links
 
-  - [Deployed Project]() 
+  - [Demo Video](https://youtu.be/_9L0reNTwvs) 
+
+  - [Sample HTML File](https://github.com/leon-luna-ray/team-profile-generator/blob/master/output/team.html) 
 
   - [Project Repository](https://github.com/leon-luna-ray/team-profile-generator)
 
