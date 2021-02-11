@@ -12,6 +12,24 @@ const Manager = require('./lib/manager.js');
 // Team members will be stored in this empty array. Need to find out how to get this into the helper functions to store. May need to write to file.
 let team = [];
 
+function startApp() {
+    inquirer.prompt(
+        {
+            type: 'list',
+            name: 'action',
+            message: 'Hello boss. What would you lke to do?', 
+            choices: ['New Team', 'Exit']
+        }
+    ).then(data => {
+        switch(data.action) {
+            case 'New Team': buildManager();
+            break;
+
+            case 'Exit': process.exit();
+        };
+    });
+};
+
 // Employee type 
 function newEmployee(){
     inquirer.prompt(
@@ -19,7 +37,7 @@ function newEmployee(){
             type: 'list',
             name: 'employeeType',
             message: 'What type of employee would you like to create?', 
-            choices: ['Engineer', 'Intern', 'Manager', 'Build Team']
+            choices: ['Engineer', 'Intern', 'Manager', 'Build Team', 'Exit']
         }
     ).then(data => {
         if(data.employeeType === 'Engineer') {
@@ -140,4 +158,4 @@ function buildTeam () {
 
 
 
-newEmployee();
+startApp();
