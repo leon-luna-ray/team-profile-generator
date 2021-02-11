@@ -11,8 +11,8 @@ function engineerTemplate(member){
         <div class="card-content contact-info">
             <ul class="employee-details">
                 <li>ID: ${member.id}</li>
-                <li>E-Mail: ${member.email}</li>
-                <li>Github: ${member.github}</li>
+                <li>E-Mail: <a href="mailto:${member.email}">${member.email}</a></li>
+                <li>Github: <a href="https://www.github.com/${member.github}">${member.github}</a></li>
             </ul>
         </div>
     </div>
@@ -27,12 +27,12 @@ function internTemplate(member){
   <div class="card intern-card">
       <div class="card-content employee-name">
           <h2 class="title">${member.name}</h2>
-          <h3 class="subtitle"><i class="fas fa-laptop-code"></i> ${member.role}</h3>
+          <h3 class="subtitle"><i class="fas fa-user-graduate"></i> ${member.role}</h3>
       </div>
       <div class="card-content contact-info">
           <ul class="employee-details">
               <li>ID: ${member.id}</li>
-              <li>E-Mail: ${member.email}</li>
+              <li>E-Mail: <a href="mailto:${member.email}">${member.email}</a></li>
               <li>School: ${member.school}</li>
           </ul>
       </div>
@@ -53,7 +53,7 @@ function managerTemplate(member){
           <div class="card-content contact-info">
               <ul class="employee-details">
                   <li>ID: ${member.id}</li>
-                  <li>E-Mail: ${member.email}</li>
+                  <li>E-Mail: <a href="mailto:${member.email}">${member.email}</a></li>
                   <li>Office Number: ${member.officeNumber}</li>
               </ul>
           </div>

@@ -28,7 +28,7 @@ function startApp() {
             case 'Exit': process.exit();
         };
     });
-};
+}; //startApp
 
 // Employee type 
 function newEmployee(){
@@ -40,16 +40,22 @@ function newEmployee(){
             choices: ['Engineer', 'Intern', 'Manager', 'Build Team', 'Exit']
         }
     ).then(data => {
-        if(data.employeeType === 'Engineer') {
-            buildEngineer();
-        } else if (data.employeeType === 'Intern') {
-            buildIntern();
-        } else if (data.employeeType === 'Manager') {
-            buildManager();
-        } else if (data.employeeType === 'Build Team') {
-            buildTeam();
+        switch(data.employeeType) {
+            case 'Engineer': buildEngineer();
+            break;
+
+            case 'Intern': buildIntern();
+            break;
+
+            case 'Manager': buildManager();
+            break;
+
+            case 'Build Team': buildTeam();
+            break;
+
+            case 'Exit': process.exit();
         }
-    }) // .then
+    })
 }; // newEmployee
 
 // Build new employee profile based on role.
@@ -150,9 +156,6 @@ function buildManager(){
 function buildTeam () {
 
         fs.writeFileSync(path.join('output', 'team.html'), generateMarkup(team));
-
-    // console.log('go team!');
-    // const markup = generateMarkup(team);
 
 }; // buildTeam
 
