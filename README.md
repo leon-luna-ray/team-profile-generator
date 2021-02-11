@@ -21,7 +21,7 @@
 
   ## Images
 
-  ![HTML](./assets/screencapture.png)
+  ![Rendered HTML capture](./assets/screenshotpng)
 
   ## Technologies
   
