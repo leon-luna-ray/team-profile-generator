@@ -36,8 +36,8 @@ function newEmployee(){
         {
             type: 'list',
             name: 'employeeType',
-            message: 'What type of employee would you like to create?', 
-            choices: ['Engineer', 'Intern', 'Manager', 'Build Team', 'Exit']
+            message: 'Select another employee role to add or build team to finish', 
+            choices: ['Engineer', 'Intern', 'Manager', 'Build Team']
         }
     ).then(data => {
         switch(data.employeeType) {
