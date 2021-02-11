@@ -152,7 +152,6 @@ function buildManager(){
     }) // .then
 }; // buildManager
 
-// Need help to build the team, need to find a way to store
 function buildTeam () {
 
         fs.writeFileSync(path.join('output', 'team.html'), generateMarkup(team));
