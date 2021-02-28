@@ -1,4 +1,4 @@
-// Import inquirer and fs
+// Import inquirer and fs module
 const inquirer = require('inquirer');
 const path = require('path');
 const fs = require('fs');
