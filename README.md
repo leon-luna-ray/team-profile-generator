@@ -3,7 +3,7 @@
 
   ## Description
 
-  A command line application for busy bosses to quickly render a styled team HTML page for quick access! The app will promt the end-user for thier contact information as well as their employees'. Once complete the app will generate a team.html file in the output folder containing everyone on the team.
+  A command line application for busy bosses to quickly render a styled team HTML page for quick access! The app will prompt the end-user for their contact information as well as their employees. Once complete the app will generate a team.html file in the output folder containing everyone on the team.
 
   ## Usage
 
